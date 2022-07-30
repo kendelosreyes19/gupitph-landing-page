@@ -1,0 +1,710 @@
+*, *::before, *::after {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    width: 100%;
+}
+
+.header-container, #showcase .container{
+    width: 80%;
+    margin: auto;
+}
+
+/* Header */
+
+header{
+    position: relative;
+    background: url('/img/background-img.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.header-container{
+    z-index: 10000;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 3rem;
+    transition: 0.3s;
+}
+
+header .sticky{
+    transition: 0.5s;
+    background: #000;
+}
+
+header .h2-black {
+    transition: 0.5s;
+    color: #fff;
+}
+
+#branding {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    cursor: pointer;
+}
+
+#branding h2{
+    color: #E24C3B;
+    padding-left: 1rem;
+}
+
+#branding img {
+    width: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    flex: 2;
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0 2rem;
+}
+
+nav a {  
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+}
+
+nav a::after {
+    display: flex;
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    background: #E24C3B;
+    bottom: -10px;
+    left: 0;
+    transition: 0.3s;
+}
+
+a:hover::after{
+    width: 100%;
+}
+
+/* Header Showcase */
+
+.header-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    position: absolute;
+    color: #fff;
+    top: 27%;
+    left: 5%;
+}
+
+.header-showcase h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.header-showcase p {
+    margin-top: 10px;
+    text-align: center;
+    
+}
+
+.header-showcase h1, .header-showcase p {
+    padding: 20px;
+}
+
+.header-showcase a {
+    margin-top: 2rem;
+    text-decoration: none;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.header-showcase a:hover {
+    border: 2px solid #E24C3B;
+    background: #E24C3B;
+    transition: 0.3s;
+    color: #fff;
+}
+
+
+/*About-Us */
+
+#about {
+    color: #fff;
+    width: 100%;
+    background: #171A21;
+}
+
+.about_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.about_title {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about_title h1 {
+    margin-top: 5rem;
+    font-size: 3rem;
+}
+
+.about_title p {
+    text-align: center;
+    margin-top: 4rem;
+    line-height: 1.5em;
+    font-size: 1.3rem;
+}
+
+/* About Us Slider */
+
+.container-slide {
+    margin-top: 3rem;
+    width: auto;
+    max-height: 650px;
+}
+
+.swiper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    max-height: 630px;
+}
+
+.swiper-wrapper {
+    width: auto;
+    height: auto;
+    text-align: center;
+    background-size: cover;
+}
+
+.swiper-wrapper img {
+    width: 100%;
+}
+
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+    color: #E24C3B;
+}
+
+.swiper .swiper-pagination-bullet-active {
+    
+    background: #E24C3B;
+}
+
+/* About Us Gallery */
+
+
+.container-gallery{
+    margin: 2rem auto;
+    width: 82%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+.gallery-h1 h1 {
+    margin: 5rem 0;
+    font-size: 3rem;
+}
+  
+  .container-gallery .box-images{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+  }
+  
+  .container-gallery .box-images .dream{
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+    overflow: hidden;
+
+  }
+  
+  .container-gallery .box-images .dream img{
+    width: 100%;
+    padding-bottom: 15px;
+    border-radius: 5px ;
+    overflow: hidden;
+    transition:all 1s;
+  }
+
+  .container-gallery .box-images .dream img:hover{
+    transform:scale(1.04);
+  }
+
+
+/* Services Offers */
+
+#service-offers{
+    height: auto;
+}
+
+.service-h1 h1{
+    text-align: center;
+    margin-top: 8rem;
+    font-size: 3rem;
+}
+
+
+#service-offers .container{
+    padding: 6rem 1rem;
+    width: auto;
+    height: auto;
+    display: flex;
+
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap; 
+}
+
+.container .box{
+    width: 23.75rem;
+    height: auto;
+    transition: 0.5s;
+}
+
+.container .box:nth-last-child(1) img{
+    margin-top: -20px; 
+    width: 89%;
+}
+
+.container .box:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 380px;
+    height: auto;
+}
+
+.box p, .box h2, .box img{
+    line-height: 1.5rem;
+    padding: 1rem 1rem;
+}
+
+.box img {
+    width: 80%;
+}
+
+/* BANNER */
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background: #E24C3B;
+    line-height: 2rem;
+    padding: 1.5rem;
+}
+
+/* Contact Us FORM*/
+
+#contact_us {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.contact-form {
+    width: 95%;
+}
+
+.contact-form, .contact-locations{
+    width: 95%;
+    margin: auto;
+}
+
+.contact-form form, .contact-locations form{
+    padding: 30px 20px;
+}
+.contact-form, .contact-locations {
+    margin-top: 8rem;
+}
+.contact-form h1 {
+    font-family: 'Baloo Bhai 2', sans-serif;
+    margin-left: 20px;
+    font-size: 2rem;
+}
+
+.contact-form a{
+    padding: 10px 20px;
+    text-align: center;
+    color: #fff;
+    background: #E24C3B;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.contact-form a:hover{
+    padding: 10px 20px;
+    color: #000;
+    background: transparent;
+}
+
+.contact-form .input-group{
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.contact-form textarea{
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 280px;
+    min-height: 150px;
+}
+
+.contact-form label {
+    height: 100%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: text;
+    transition: 0.2s;
+}
+
+.contact-form input, textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    font-size: 15px
+}
+
+.contact-form input:focus~label,.contact-form input:valid~label, .contact-form textarea:focus~label, .contact-form textarea:valid~label{
+    top: -25px;
+}
+
+.contact-form{
+    grid-column-start: 1;
+}
+
+
+
+/* Contact Us LIST ITEMS*/
+
+.contact-locations{
+    grid-column-start: 2;
+}
+
+.contact-locations ul{
+    list-style: none;
+}
+
+.ul-group {
+    width: 100%;
+}
+
+.ul-group ul{
+    margin-bottom: 40px;
+}
+
+.li-capital {
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.5s;
+    margin-bottom: 10px;
+}
+
+.li-capital:hover {
+    color: #E24C3B;
+}
+
+.li-indent {
+    padding-left: 55px;
+}
+
+/* MAP */
+
+.location-map {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    height: 400px;
+}
+
+#map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+}
+
+
+/* FOOTER */
+
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background: #0088E0;
+    text-align: center;
+}
+
+
+/* Media Queries *******************************************************************************************/
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px){
+
+    /* Header */
+
+    #branding {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    #branding img{
+        width: 30px;
+    }
+
+    /* Header Showcase */
+
+.header-showcase {
+    top: 30%;
+    left: 0%;
+}
+
+.header-showcase h1 {
+    font-size: 2rem;
+}
+
+.header-showcase p {
+    margin-top: -10px;
+    font-size: 0.8rem; 
+}
+
+.header-showcase h1, .header-showcase p {
+    padding: 20px;
+}
+
+.header-showcase a {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    padding: 5px;
+}
+
+
+/*About-Us */
+
+.about_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.about_title {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about_title h1 {
+    margin-top: 3rem;
+    font-size: 2rem;
+}
+
+.about_title p {
+    margin: auto 20px;
+    margin-top: 1rem;
+    line-height: 1.5em;
+    font-size: 0.8rem;
+}
+
+/* About Us Slider */
+
+.swiper {
+    width: 80vw;
+    height: auto;
+}
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+    font-size: 10px;
+}
+
+
+/* About Us Gallery */
+
+.gallery-h1 h1 {
+    margin: 3rem 0;
+    font-size: 2rem;
+}
+
+
+.container-gallery .box-images {
+    flex-direction: column;
+
+}
+
+.container-gallery .box-images .dream{
+width: 100%;
+
+}
+
+/* Services Offers */
+
+#service-offers .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.service-h1 h1{
+    margin-top: 5rem;
+    margin-bottom: -2rem;
+    font-size: 2rem;
+}
+
+.container .box p {
+    font-size: 0.8rem;
+}
+
+.container .box{
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.container .box img{
+    width: 50%;
+}
+
+.container .box:nth-last-child(1) img{
+    width: 60%;
+}
+
+.container .box:hover{
+    width: auto;
+}
+
+/* Contact Us FORM*/
+
+#contact_us {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.contact-form {
+    margin-top: 3rem;
+}
+
+.contact-form form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.contact-form h1 {
+    margin: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    
+}
+
+.contact-form a{
+    padding: 10px 20px;
+    color: #fff;
+}
+
+
+
+.contact-form .input-group{
+    position: relative;
+    width: 100%;
+}
+
+
+.contact-form input, textarea{
+    width: 100%;
+    padding: 10px;
+}
+
+.contact-form textarea{
+    width: auto;
+    max-height: 13.75rem;
+    min-height: 9.375;
+}
+
+.contact-form{
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+
+/* Contact Us LIST ITEMS*/
+
+.contact-locations{
+    margin-top: 0;
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+
+.li-capital {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+
+.li-indent {
+    padding-left: 45px;
+}
+
+/* MAP */
+
+.location-map {
+    width: 90%;
+    margin: auto;
+    height: 13.75rem;
+}
+
+}
