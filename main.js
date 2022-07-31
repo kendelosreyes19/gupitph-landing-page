@@ -1,4 +1,23 @@
-const swiper = new Swiper(".swiper", {
+const primaryNav = document.querySelector(".primary-navigation");
+const navToggle = document.querySelector(".mobile-nav-toggle");
+
+navToggle.addEventListener("click", () => {
+
+  const visibility = primaryNav.getAttribute("data-visible");
+
+  if (visibility === "false") {
+    primaryNav.setAttribute("data-visible", true);
+    navToggle.setAttribute("aria-expanded", true);
+  }
+
+  else {
+    primaryNav.setAttribute("data-visible", false);
+    navToggle.setAttribute("aria-expanded", false);
+  };
+});
+
+
+var swiper1 = new Swiper(".swiper1", {
   // Optional parameters
   autoplay: {
     delay: 3000,
@@ -8,7 +27,7 @@ const swiper = new Swiper(".swiper", {
 
   // If we need pagination
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper-pagination1",
     clickable: true,
   },
 
@@ -86,7 +105,7 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoia2VuZGVsb3NyZXllczE5IiwiYSI6ImNsNXVrNzRlcDAwa
     !imgSpace && imgSpace++;
   
     $(window).resize(function() {
-      $("body").css(
+      $("html").css(
         "height",
         $(window).height() + imgSpace * ($(".image").length - 1) + "px"
       );
@@ -110,7 +129,16 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoia2VuZGVsb3NyZXllczE5IiwiYSI6ImNsNXVrNzRlcDAwa
       });
     }
   });
-  
+ 
+  var swiper2 = new Swiper(".swiper2", {
+    // Optional parameters
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    speed: 1000,
+  });
 
   
   

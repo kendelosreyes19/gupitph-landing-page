@@ -9,6 +9,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 
 html {
@@ -71,25 +72,25 @@ header .h2-black {
     width: 50px;
 }
 
-nav {
+.header-container nav {
     display: flex;
     justify-content: end;
     flex: 2;
 }
 
-nav ul{
+.header-container nav ul{
     width: 100%;
     display: flex;
     justify-content: end;
     align-items: center;
 }
 
-nav ul li {
+.header-container nav ul li {
     list-style: none;
     padding: 0 2rem;
 }
 
-nav a {  
+.header-container nav a {  
     position: relative;
     font-size: 18px;
     color: #fff;
@@ -97,7 +98,7 @@ nav a {
     letter-spacing: 0.05em;
 }
 
-nav a::after {
+.header-container nav a::after {
     display: flex;
     content: "";
     position: absolute;
@@ -109,7 +110,7 @@ nav a::after {
     transition: 0.3s;
 }
 
-a:hover::after{
+.header-container nav a:hover::after{
     width: 100%;
 }
 
@@ -125,6 +126,14 @@ a:hover::after{
     top: 27%;
     left: 5%;
 }
+
+.mobile-nav-toggle {
+   display: none;
+}
+
+.mobile-nav-toggle:hover {
+    cursor: pointer;
+ }
 
 .header-showcase h1 {
     text-align: center;
@@ -200,7 +209,7 @@ a:hover::after{
     max-height: 650px;
 }
 
-.swiper {
+.swiper1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -208,23 +217,22 @@ a:hover::after{
     max-height: 630px;
 }
 
-.swiper-wrapper {
-    width: auto;
-    height: auto;
+.swiper1 .swiper-wrapper {
+    
     text-align: center;
     background-size: cover;
 }
 
-.swiper-wrapper img {
+.swiper1 .swiper-wrapper img {
     width: 100%;
 }
 
 
-.swiper .swiper-button-prev, .swiper .swiper-button-next{
+.swiper1 .swiper-button-prev, .swiper .swiper-button-next{
     color: #E24C3B;
 }
 
-.swiper .swiper-pagination-bullet-active {
+.swiper1 .swiper-pagination-bullet-active {
     
     background: #E24C3B;
 }
@@ -327,14 +335,33 @@ a:hover::after{
 /* BANNER */
 
 .banner {
+    width: 100%;
+    color: #fff;
+    padding: 1rem 4rem;
+    background: #0088E0;
+}
+
+.banner .swiper2 {
+    width: 100%;
+    line-height: 2.5rem;
+    
+}
+
+.banner .swiper2 .swiper-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: start;
     align-items: center;
     text-align: center;
-    color: #fff;
-    background: #E24C3B;
-    line-height: 2rem;
-    padding: 1.5rem;
+}
+
+.banner .swiper2 .swiper-wrapper .swiper-slide{
+    font-size: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Contact Us FORM*/
@@ -380,6 +407,7 @@ a:hover::after{
 .contact-form a:hover{
     padding: 10px 20px;
     color: #000;
+    border: 2px solid #E24C3B;
     background: transparent;
 }
 
@@ -486,19 +514,68 @@ footer{
 
 /* Media Queries *******************************************************************************************/
 
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px){
+@media (min-width: 20rem) and (max-width: 30.063rem){
 
     /* Header */
+    
+    #primary-navigation{
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        position: fixed;
+        inset: 0 0 0 0%;
+        padding: min(30vh, 10rem) 2rem;
+        background: hsl(0 0% 0% / 0.5);
+        backdrop-filter: blur(1rem);
+        z-index: 1000;
+
+        transform: translateX(100%);
+        transition: transform 400ms ease-in-out;
+        
+    }
+
+
+    #primary-navigation li a {
+        letter-spacing: 0.2rem;
+        font-size: 1.5rem;
+    }
+    
+    #primary-navigation[data-visible="true"]{
+        transform: translateX(0%);
+
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        background: url(/img/burger-menu.png);
+        background-repeat: no-repeat;
+        width: 2rem;
+        aspect-ratio: 1;
+        border: none;
+        top: 1rem;
+        right: 2rem;
+        z-index: 9999;
+    }
+    
+    header{
+        position: relative;
+        background: url('/img/background-img-small.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50vh;
+    }
 
     #branding {
-        font-size: 12px;
-        margin-left: 10px;
+        font-size: 0.875rem;
     }
 
     #branding img{
-        width: 30px;
+        width: 2.5rem;
     }
 
     /* Header Showcase */
@@ -683,7 +760,8 @@ width: 100%;
 /* Contact Us LIST ITEMS*/
 
 .contact-locations{
-    margin-top: 0;
+    width: 90%;
+    margin-top: 3rem;
     grid-column-start: 1;
     grid-row-start: 2;
 }
@@ -705,6 +783,124 @@ width: 100%;
     width: 90%;
     margin: auto;
     height: 13.75rem;
+}
+
+}
+
+@media (min-width: 30.063rem) and (max-width: 55rem){
+
+    /* Header */
+    
+    #primary-navigation{
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        
+        position: fixed;
+        inset: 0 0 0 50%;
+        padding: min(30vh, 10rem) 2rem;
+        background: hsl(0 0% 0% / 0.5);
+        backdrop-filter: blur(1rem);
+        z-index: 1000;
+
+        transform: translateX(100%);
+        transition: transform 400ms ease-in-out;
+        
+    }
+    
+    #primary-navigation[data-visible="true"]{
+        transform: translateX(0%);
+
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        background: url(/img/burger-menu.png);
+        background-repeat: no-repeat;
+        width: 2rem;
+        aspect-ratio: 1;
+        border: none;
+        top: 1rem;
+        right: 2rem;
+        z-index: 9999;
+    }
+
+
+    /* Services Offers */
+
+#service-offers .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.container .box{
+    width: 60%;
+    margin: 2rem auto;
+}
+
+.container .box img{
+    width: 60%;
+}
+
+.container .box:nth-last-child(1) img{
+    width: 70%;
+}
+
+.container .box:hover{
+    width: 60%;
+}
+
+
+    /* Contact Us FORM*/
+
+#contact_us {
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.contact-form {
+    width: 90%;
+    margin-top: 3rem;
+}
+
+
+.contact-form h1 {
+    margin: 1rem;
+    font-size: 2rem;
+    
+}
+
+.contact-form{
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+
+/* Contact Us LIST ITEMS*/
+
+.contact-locations{
+    width: 90%;
+    margin-top: 2rem;
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+/* MAP */
+
+.location-map {
+    width: 60%;
+    margin: auto;
+    height: 20.75rem;
 }
 
 }
