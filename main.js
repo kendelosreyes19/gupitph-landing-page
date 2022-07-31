@@ -96,38 +96,6 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoia2VuZGVsb3NyZXllczE5IiwiYSI6ImNsNXVrNzRlcDAwa
     var Branding = document.querySelector("#branding h2")
     ;
     Branding.classList.toggle("h2-black", window.scrollY > 2600)
-  })
-
-
-  $(document).ready(function() {
-    //by Pixels
-    let imgSpace = 2500;
-    !imgSpace && imgSpace++;
-  
-    $(window).resize(function() {
-      $("html").css(
-        "height",
-        $(window).height() + imgSpace * ($(".image").length - 1) + "px"
-      );
-    });
-  
-    $(window).trigger("resize");
-  
-    $("#c1").fadeIn(0);
-  
-    $(window).scroll(function() {
-      var pos = $(document).scrollTop();
-      console.log(pos);
-      hideAll("c" + (Math.trunc(pos / imgSpace) + 1));
-      $("#c" + (Math.trunc(pos / imgSpace) + 1)).fadeIn(0);
-    });
-  
-    function hideAll(exceptMe) {
-      $(".image").each(function(i) {
-        if ($(this).attr("id") == exceptMe) return;
-        $(this).fadeOut(0);
-      });
-    }
   });
  
   var swiper2 = new Swiper(".swiper2", {
