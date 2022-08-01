@@ -551,7 +551,8 @@ footer{
     .mobile-nav-toggle {
         display: block;
         position: absolute;
-        background: url(/img/burger-menu.png);
+        background-color: transparent;
+        background-image: url(/img/burger-menu-small.png);
         background-repeat: no-repeat;
         width: 2rem;
         aspect-ratio: 1;
@@ -561,13 +562,17 @@ footer{
         z-index: 9999;
     }
     
+    .mobile-nav-toggle[aria-expanded="true"]{
+        background-image: url(/img/close-small.png);
+    }
+
     header{
         position: relative;
         background: url('/img/background-img-small.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 50vh;
+        height: 80vh;
     }
 
     #branding {
@@ -818,7 +823,8 @@ width: 100%;
     .mobile-nav-toggle {
         display: block;
         position: absolute;
-        background: url(/img/burger-menu.png);
+        background-color: transparent;
+        background-image: url(/img/burger-menu-large.png);
         background-repeat: no-repeat;
         width: 2rem;
         aspect-ratio: 1;
@@ -828,6 +834,9 @@ width: 100%;
         z-index: 9999;
     }
 
+    .mobile-nav-toggle[aria-expanded="true"]{
+        background-image: url(/img/close-large.png);
+    }
 
     /* Services Offers */
 
