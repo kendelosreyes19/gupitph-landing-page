@@ -2,38 +2,32 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Kenneth Delos Reyes">
-    <meta name="keywords" content="Barber Shop, Filipino">
-    <meta name="author" content="Kenneth Delos Reyes">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="description" content="Kenneth Delos Reyes" />
+    <meta name="keywords" content="Barber Shop, Filipino" />
+    <meta name="author" content="Kenneth Delos Reyes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
-
-    
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" rel="stylesheet" />
 </head>
 
 <body>
 
+    <div id="loader" class="center"></div>
     <!--Heading-->
 
     <header>
-
         <div class="header-container">
+            <img src="/img/main-logo.png" alt="gph-logo">
 
-            <div id="branding">
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+            </button>
 
-                <h2>Gupit PH</h2>
-
-                <div><img src="/img/logo-gold.png"/></div>
-            </div>
-
-            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only">Menu</span></button>
-            
             <nav>
                 <ul id="primary-navigation" data-visible="false" class="primary-navigation">
                     <li><a href="#">Home</a></li>
@@ -42,53 +36,48 @@
                     <li><a href="#contact_us">Contact</a></li>
                 </ul>
             </nav>
-
         </div>
 
         <div class="header-showcase">
+            <h1>
+                When it comes to haircuts,
+                <span style="color: #f7402c">Gupit PH</span> knows best.
+            </h1>
 
-            <h1>When it comes to haircuts, <span style="color: #f7402c;">Gupit PH</span> knows best.</h1>
-
-            <p>Barbershop that feels like home, Haircuts from a real barber, Visit us for a great
-                experience.</p>
+            <p>
+                Barbershop that feels like home, Haircuts from a real barber, Visit us
+                for a great experience.
+            </p>
 
             <a href="#contact_us">Make an Appointment</a>
-
         </div>
-
     </header>
 
     <main>
-
         <section id="about">
-
             <div class="about_container">
-
                 <div class="about_title">
-
                     <h1>Gupit PH</h1>
-                    <p>We are one of the best Barber shop that offers a lot of services here in the Philippines. Our
-                        Barbers are
-                        very passionate and well trained when it comes to hair styling.</p>
+                    <p>
+                        We are one of the best Barber shop that offers a lot of services
+                        here in the Philippines. Our Barbers are very passionate and well
+                        trained when it comes to hair styling.
+                    </p>
                 </div>
 
                 <div class="container-slide">
-
                     <!-- Slider main container -->
 
                     <div class="swiper swiper1">
-
                         <!-- Additional required wrapper -->
 
                         <div class="swiper-wrapper">
-
                             <!-- Slides -->
 
-                            <div class="swiper-slide"><img src="/img/img1.jpg"></div>
-                            <div class="swiper-slide"><img src="/img/img2.jpg"></div>
-                            <div class="swiper-slide"><img src="/img/img3.jpg"></div>
-                            <div class="swiper-slide"><img src="/img/img4.jpg"></div>
-
+                            <div class="swiper-slide"><img src="/img/img1.jpg" /></div>
+                            <div class="swiper-slide"><img src="/img/img2.jpg" /></div>
+                            <div class="swiper-slide"><img src="/img/img3.jpg" /></div>
+                            <div class="swiper-slide"><img src="/img/img4.jpg" /></div>
                         </div>
 
                         <!-- If we need pagination -->
@@ -100,252 +89,209 @@
                         <div class="swiper-button-prev"></div>
 
                         <div class="swiper-button-next"></div>
-
                     </div>
-
-                </div> 
-
-                <div class="container-gallery">
-
-                        <div class="gallery-h1">
-                            <h1>GALLERY</h1>
-                        </div>
-
-                        <div class="box-images">
-      
-                            <div class="dream">
-                              <img src="/img/portrait-1.jpg">
-                              <img src="/img/landscape-3.jpg">
-                              <img src="/img/landscape-4.jpg">
-                            </div>
-                      
-                              <div class="dream">
-                              <img src="/img/landscape-1.jpg">
-                              <img src="/img/portrait-3.jpg">
-                              <img src="/img/landscape-5.jpg">
-
-                                  
-                            </div>
-                      
-                              <div class="dream">
-                              <img src="/img/portrait-2.jpg">
-                              <img src="/img/portrait-4.jpg">
-
-                                  
-                            </div>
-                      
-                          </div>
-
                 </div>
 
-            </div>
+                <div class="container-gallery">
+                    <div class="gallery-h1">
+                        <h1>GALLERY</h1>
+                    </div>
 
+                    <div class="box-images">
+                        <div class="dream">
+                            <img src="/img/portrait-1.jpg" />
+                            <img src="/img/landscape-3.jpg" />
+                            <img src="/img/landscape-4.jpg" />
+                        </div>
+
+                        <div class="dream">
+                            <img src="/img/landscape-1.jpg" />
+                            <img src="/img/portrait-3.jpg" />
+                            <img src="/img/landscape-5.jpg" />
+                        </div>
+
+                        <div class="dream">
+                            <img src="/img/portrait-2.jpg" />
+                            <img src="/img/portrait-4.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="service-offers">
-
             <div class="service-h1">
                 <h1>SERVICES</h1>
             </div>
-            
+
             <div class="container">
-
                 <div class="box">
-
-                    <img src="./img/icon_scissor.png">
+                    <img src="./img/icon_scissor.png" />
                     <h2>Scalp Massage</h2>
-                    <p>Along with getting a haircut, your skilled barber may occasionally give you a lengthy scalp
-                        massage.</p>
-
+                    <p>
+                        Along with getting a haircut, your skilled barber may occasionally
+                        give you a lengthy scalp massage.
+                    </p>
                 </div>
 
                 <div class="box">
-
-                    <img src="./img/icon_comb.png" style="padding-top: 10px;">
+                    <img src="./img/icon_comb.png" style="padding-top: 10px" />
                     <h2>Home Service</h2>
-                    <p>We bring you our official Home Service for those who would like to bring the Gupit PH
-                        experience
-                        into your homes.</p>
-
+                    <p>
+                        We bring you our official Home Service for those who would like to
+                        bring the Gupit PH experience into your homes.
+                    </p>
                 </div>
 
                 <div class="box">
-
-                    <img src="./img/icon_razor.png">
-                    <h2 style="margin-top: -25px;">Shaving</h2>
-                    <p style="margin-top: 2px;">Shaving, mustache and beard grooming, hairpiece fits, and facials are all available.</p>
-
+                    <img src="./img/icon_razor.png" />
+                    <h2 style="margin-top: -25px">Shaving</h2>
+                    <p style="margin-top: 2px">
+                        Shaving, mustache and beard grooming, hairpiece fits, and facials
+                        are all available.
+                    </p>
                 </div>
             </div>
-
         </section>
 
         <div class="banner">
-
             <div class="swiper swiper2">
-
                 <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <h1>"MY HUSBAND WILL NOT STOP TALKING ABOUT THIS PLACE."</h1>
+                        <p>- Kristin Cottonwood</p>
+                    </div>
 
-                  <div class="swiper-slide">
+                    <div class="swiper-slide">
+                        <h1>"I LOVE YOU MARY PERZL ENTERESO"</h1>
+                        <p>- Kenneth Delos Reyes</p>
+                    </div>
 
-                    <h1>"MY HUSBAND WILL NOT STOP TALKING ABOUT THIS PLACE."</h1>
-                    <p> - Kristin Cottonwood</p>
-
-                  </div>
-
-                  <div class="swiper-slide">
-
-                    <h1>"I LOVE YOU MARY PERZL ENTERESO"</h1>
-                    <p>- Kenneth Delos Reyes</p>
-
-                  </div>
-
-                  <div class="swiper-slide">
-
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum!</h1>
-                    <p>- Lorem ipsum dolor sit</p>
-
-                  </div>
-
+                    <div class="swiper-slide">
+                        <h1>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Laborum!
+                        </h1>
+                        <p>- Lorem ipsum dolor sit</p>
+                    </div>
                 </div>
-               
-              </div>
             </div>
         </div>
 
         <section id="contact_us">
-
             <div class="contact-form">
-
                 <h1>DROP US AN EMAIL</h1>
-                
-                <form>
 
+                <form>
                     <div class="input-group">
-                        <input type="text" id="name" required>
-                        <label for="name"><i class="fa-solid fa-user" style="margin-right: 5px;"></i>Full Name</label>
+                        <input type="text" id="name" required />
+                        <label for="name"><i class="fa-solid fa-user" style="margin-right: 5px"></i>Full
+                            Name</label>
                     </div>
 
                     <div class="input-group">
-                        <input type="tel" id="number" required>
-                        <label for="number"><i class="fa-solid fa-phone" style="margin-right: 5px;"></i>Contact
+                        <input type="tel" id="number" required />
+                        <label for="number"><i class="fa-solid fa-phone" style="margin-right: 5px"></i>Contact
                             Number</label>
                     </div>
 
                     <div class="input-group">
-                        <input type="email" id="email" required>
-                        <label for="email"><i class="fa-solid fa-envelope" style="margin-right: 5px;"></i>Email</label>
+                        <input type="email" id="email" required />
+                        <label for="email"><i class="fa-solid fa-envelope" style="margin-right: 5px"></i>Email</label>
                     </div>
 
                     <div class="input-group">
                         <textarea name="message" rows="8" required></textarea>
                         <label for="message"><i class="fa-solid fa-comments"
-                                style="margin-right: 5px;"></i>Message</label>
+                                style="margin-right: 5px"></i>Message</label>
                     </div>
 
                     <a href="#contact_us">SUBMIT</a>
-
                 </form>
-
             </div>
 
             <div class="contact-locations">
-
                 <div class="ul-group">
-
                     <ul>
-                        <li class="li-capital"><i class="fa-solid fa-location-dot fa-xl"
-                                style="margin-right: 15px;"></i>Location</li>
+                        <li class="li-capital">
+                            <i class="fa-solid fa-location-dot fa-xl" style="margin-right: 15px"></i>Location
+                        </li>
                         <li class="li-indent">Location</li>
                     </ul>
 
                     <ul>
-                        <li class="li-capital"><i class="fa-solid fa-phone fa-lg"
-                                style="margin-right: 15px;"></i>Contact
-                            Number</li>
-                        <li class="li-indent">4th Floor, SM City Urdaneta Central, Urdaneta City Pangasinan</li>
+                        <li class="li-capital">
+                            <i class="fa-solid fa-phone fa-lg" style="margin-right: 15px"></i>Contact Number
+                        </li>
+                        <li class="li-indent">
+                            4th Floor, SM City Urdaneta Central, Urdaneta City Pangasinan
+                        </li>
                     </ul>
 
                     <ul>
-                        <li class="li-capital"><i class="fa-solid fa-envelope fa-lg"
-                                style="margin-right: 15px;"></i>Email
+                        <li class="li-capital">
+                            <i class="fa-solid fa-envelope fa-lg" style="margin-right: 15px"></i>Email
                         </li>
                         <li class="li-indent">info@gupitph.com.ph</li>
                     </ul>
-
                 </div>
 
                 <div class="location-map">
-                    <div id="map">
-
-                    </div>
+                    <div id="map"></div>
                 </div>
-
             </div>
-
         </section>
 
-
         <footer>
-
             <div class="footer-designs">
-
                 <div class="color-pallete">
-
-                    <h5>Color Palletes</h5>
+                    <p>Color Palletes</p>
 
                     <div class="color-container">
-
                         <div class="color-group">
-                            <input id="style1" disabled>
+                            <input id="style1" disabled />
                             <label class="style1-label" for="style1">Primary Color</label>
                         </div>
 
                         <div class="color-group">
-                            <input id="style2" disabled>
+                            <input id="style2" disabled />
                             <label class="style2-label" for="style1">Secondary Color</label>
                         </div>
 
                         <div class="color-group">
-                            <input id="style3" disabled>
+                            <input id="style3" disabled />
                             <label class="style3-label" for="style1">Secondary Color</label>
                         </div>
-
                     </div>
-                    
                 </div>
 
                 <div class="soc-med">
-
-                    <h5>Social Media Accounts</h5>
+                    <p>Social Media Accounts</p>
 
                     <div class="container-soc-med">
-                        <a href="https://www.facebook.com/kenneth.delosreyes19" class="fa-brands fa-facebook-f" style="background: #3B5998;
-                    color: white;"></a>
+                        <a href="https://www.facebook.com/kenneth.delosreyes19" class="fa-brands fa-facebook"
+                            target="_blank"></a>
 
-                    <a href="https://github.com/kendelosreyes19" class="fa-brands fa-github"></a>
+                        <a href="https://github.com/kendelosreyes19" class="fa-brands fa-github" target="_blank"></a>
 
-                    <a href="" class="fa-brands fa-linkedin-in"></a>
+                        <a href="https://www.linkedin.com/in/kenneth-delos-reyes-2aa81a223/"
+                            class="fa-brands fa-linkedin-in" target="_blank"></a>
                     </div>
-                    
                 </div>
 
-                <div class="footer-gph">
-                    <p>GUPIT PH, Copyright &copy; 2022</p>
+                <div class="gph-footer">
+                    <p>GUPIT PH by Kenneth Delos Reyes, Copyright &copy; 2022</p>
                 </div>
-                
             </div>
-
-
         </footer>
     </main>
 
+    <script defer src="main.js"></script>
     <script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script defer src="https://kit.fontawesome.com/dadb358f5a.js" crossorigin="anonymous"></script>
-    <script defer src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
-    <script defer src="main.js"></script>
-    
+    <script defer src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+
 </body>
 
 </html>
