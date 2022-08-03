@@ -1,3 +1,5 @@
+// FOR MOBILE AND TABLET TOGGLE
+
 const primaryNav = document.querySelector(".primary-navigation");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 
@@ -16,6 +18,7 @@ navToggle.addEventListener("click", () => {
   };
 });
 
+// FOR IMAGE SWIPER
 
 var swiper1 = new Swiper(".swiper1", {
   // Optional parameters
@@ -37,6 +40,8 @@ var swiper1 = new Swiper(".swiper1", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+// FOR THE MAP
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoia2VuZGVsb3NyZXllczE5IiwiYSI6ImNsNXVrNzRlcDAwa20zY3BnMGo4bmRhcWgifQ.MMWF2Dph5KHhi5ipoi4iqw';
   const map = new mapboxgl.Map({
@@ -86,6 +91,8 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoia2VuZGVsb3NyZXllczE5IiwiYSI6ImNsNXVrNzRlcDAwa
           }
       );
   });
+
+// FOR THE COMMENTS BANNER SWIPER
 
   window.addEventListener("scroll", function(){
 
