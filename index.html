@@ -15,9 +15,12 @@
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="no-scroll">
+    <div class='spinner-wrapper'>
+        <div class="spinner"></div>
+    </div>
 
-    <div id="loader" class="center"></div>
+
     <!--Heading-->
 
     <header>
@@ -286,11 +289,11 @@
         </footer>
     </main>
 
-    <script defer src="main.js"></script>
-    <script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script defer src="https://kit.fontawesome.com/dadb358f5a.js" crossorigin="anonymous"></script>
-    <script defer src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="https://kit.fontawesome.com/dadb358f5a.js" crossorigin="anonymous" defer></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js' defer></script>
+    <script src="main.js" defer></script>
 
 </body>
 

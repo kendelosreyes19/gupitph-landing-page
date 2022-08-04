@@ -1,25 +1,30 @@
-// UNHIDE CONTENT AFTER LOAD
+// Loader
 
-document.onreadystatechange = function () {
-	if (document.readyState !== "complete") {
-		document.querySelector(
-			"body").style.visibility = "hidden";
-		document.querySelector(
-			"#loader").style.visibility = "visible";
-	} else {
-		document.querySelector(
-			"#loader").style.display = "none";
-		document.querySelector(
-			"body").style.visibility = "visible";
+let spinnerWrapper = document.querySelector('.spinner-wrapper');
+
+window.addEventListener('load', function () {
+	spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+});
+
+(function () {
+	function onReady() {
+		document.body.classList.remove('no-scroll');
 	}
-};
 
-// FOR MOBILE AND TABLET TOGGLE
+	if (document.readyState === 'complete') {
+		onReady();
+	} else {
+		document.addEventListener('DOMContentLoaded', onReady);
+	}
+})();
+
+// Tablet and Phone Navigation
 
 const primaryNav = document.querySelector(".primary-navigation");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 
 navToggle.addEventListener("click", () => {
+
 	const visibility = primaryNav.getAttribute("data-visible");
 
 	if (visibility === "false") {
@@ -28,88 +33,86 @@ navToggle.addEventListener("click", () => {
 	} else {
 		primaryNav.setAttribute("data-visible", false);
 		navToggle.setAttribute("aria-expanded", false);
-	}
+	};
 });
 
-// FOR IMAGE SWIPER
+// Image Swiper 
 
 var swiper1 = new Swiper(".swiper1", {
-	// Optional parameters
+
 	autoplay: {
 		delay: 3000,
 		disableOnInteraction: false,
 	},
 	loop: true,
 
-	// If we need pagination
 	pagination: {
 		el: ".swiper-pagination1",
 		clickable: true,
 	},
 
-	// Navigation arrows
 	navigation: {
 		nextEl: ".swiper-button-next",
 		prevEl: ".swiper-button-prev",
 	},
 });
 
-// FOR THE MAP
+// Mapbox Map
 
-mapboxgl.accessToken =
-	"pk.eyJ1Ijoia2VuZGVsb3NyZXllczE5IiwiYSI6ImNsNXVrNzRlcDAwa20zY3BnMGo4bmRhcWgifQ.MMWF2Dph5KHhi5ipoi4iqw";
+mapboxgl.accessToken = 'pk.eyJ1Ijoia2VuZGVsb3NyZXllczE5IiwiYSI6ImNsNXVrNzRlcDAwa20zY3BnMGo4bmRhcWgifQ.MMWF2Dph5KHhi5ipoi4iqw';
 const map = new mapboxgl.Map({
-	container: "map", // container ID
-	style: "mapbox://styles/mapbox/streets-v11", // style URL
-	zoom: 13, // starting zoom
-	center: [120.5724, 15.9709], // starting position
+	container: 'map',
+	style: 'mapbox://styles/mapbox/streets-v11',
+	zoom: 13,
+	center: [120.5724, 15.9709]
 });
 
-map.on("load", () => {
-	// Load an image from an external URL.
+map.on('load', () => {
+
 	map.loadImage(
-		"https://cdn-icons-png.flaticon.com/512/684/684908.png",
+		'https://cdn-icons-png.flaticon.com/512/684/684908.png',
 		(error, image) => {
 			if (error) throw error;
 
-			// Add the image to the map style.
-			map.addImage("cat", image);
+			map.addImage('cat', image);
 
-			// Add a data source containing one point feature.
-			map.addSource("point", {
-				type: "geojson",
-				data: {
-					type: "FeatureCollection",
-					features: [{
-						type: "Feature",
-						geometry: {
-							type: "Point",
-							coordinates: [120.5724, 15.9709],
-						},
-					}, ],
-				},
+			map.addSource('point', {
+				'type': 'geojson',
+				'data': {
+					'type': 'FeatureCollection',
+					'features': [{
+						'type': 'Feature',
+						'geometry': {
+							'type': 'Point',
+							'coordinates': [120.5724, 15.9709]
+						}
+					}]
+				}
 			});
 
-			// Add a layer to use the image to represent the data.
 			map.addLayer({
-				id: "points",
-				type: "symbol",
-				source: "point", // reference the data source
-				layout: {
-					"icon-image": "cat", // reference the image
-					"icon-size": 0.09,
-				},
+				'id': 'points',
+				'type': 'symbol',
+				'source': 'point',
+				'layout': {
+					'icon-image': 'cat',
+					'icon-size': 0.09
+				}
 			});
 		}
 	);
 });
 
-// FOR THE COMMENTS BANNER SWIPER
+// Header Animation
 
 window.addEventListener("scroll", function () {
+
 	var MainHeader = document.querySelector(".header-container");
-	MainHeader.classList.toggle("sticky", window.scrollY > 900);
+	MainHeader.classList.toggle("sticky", window.scrollY > 2500)
+
 });
+
+// Swiper for Banner
 
 var swiper2 = new Swiper(".swiper2", {
 	// Optional parameters
