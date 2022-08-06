@@ -20,21 +20,20 @@ window.addEventListener('load', function () {
 
 // Tablet and Phone Navigation
 
-const primaryNav = document.querySelector(".primary-navigation");
-const navToggle = document.querySelector(".mobile-nav-toggle");
+const toggle = document.getElementById('toggle');
+const sidebar = document.getElementById('sidebar');
 
-navToggle.addEventListener("click", () => {
+document.onclick = function (e) {
+	if (e.target.id !== 'sidebar' && e.target.id !== 'toggle') {
+		toggle.classList.remove('active');
+		sidebar.classList.remove('active');
+	}
+}
 
-	const visibility = primaryNav.getAttribute("data-visible");
-
-	if (visibility === "false") {
-		primaryNav.setAttribute("data-visible", true);
-		navToggle.setAttribute("aria-expanded", true);
-	} else {
-		primaryNav.setAttribute("data-visible", false);
-		navToggle.setAttribute("aria-expanded", false);
-	};
-});
+toggle.onclick = function () {
+	toggle.classList.toggle('active');
+	sidebar.classList.toggle('active');
+}
 
 // Image Swiper 
 
