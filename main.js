@@ -107,7 +107,8 @@ map.on('load', () => {
 window.addEventListener("scroll", function () {
 
 	var MainHeader = document.querySelector(".header-container");
-	MainHeader.classList.toggle("sticky", window.scrollY > 2500)
+	MainHeader.classList.toggle("sticky", window.scrollY > 2000)
+
 
 });
 
