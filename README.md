@@ -1,3 +1,6 @@
 # Landing Page
-Landing page for Gupit PH
+It is a single page for Gupit PH
+
+## Screenshot
+<img src="Screenshots/gupit_ph.png">
 
